@@ -136,7 +136,8 @@ void OverlayFilter::spatialReferenceChanged(const SpatialReference& srs)
     {
         try
         {
-            poly.geom.transform(srs);
+//ABELL
+//            poly.geom.transform(srs);
         }
         catch (pdal_error& err)
         {

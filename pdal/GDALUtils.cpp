@@ -1005,7 +1005,9 @@ std::vector<Polygon> getPolygons(const NL::json& ogr)
 
                 poly.update(options.at("geometry").get<std::string>());
                 if (poly.getSpatialReference().valid())
-                    poly.transform(sref.wkt());
+;
+//ABELL
+//                    poly.transform(sref.wkt());
                 else
                     poly.setSpatialReference(sref.wkt());
                 geom = (OGRGeometry *)poly.getOGRHandle();

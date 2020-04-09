@@ -183,7 +183,8 @@ void CropFilter::transform(const SpatialReference& srs)
     {
         try
         {
-            geom.m_poly.transform(srs);
+//ABELL
+//            geom.m_poly.transform(srs);
         }
         catch (pdal_error& err)
         {
@@ -219,7 +220,8 @@ void CropFilter::transform(const SpatialReference& srs)
     for (auto& point : m_args->m_centers)
     {
         point.setSpatialReference(m_args->m_assignedSrs);
-        point.transform(srs);
+//ABELL
+//        point.transform(srs);
     }
     // Set the assigned SRS for the points/bounds to the one we've
     // transformed to.

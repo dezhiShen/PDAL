@@ -226,7 +226,8 @@ void HexBin::done(PointTableRef table)
         int zone = SpatialReference::calculateZone(box.minx, box.miny);
 
         SpatialReference utm("EPSG:327" + std::to_string(std::abs(zone)));
-        density_p.transform(utm);
+//ABELL
+//        density_p.transform(utm);
     }
 
     m_metadata.add("boundary", p.wkt(m_precision),

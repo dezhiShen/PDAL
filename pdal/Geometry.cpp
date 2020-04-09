@@ -138,6 +138,7 @@ bool Geometry::srsValid() const
 }
 
 
+/**
 void Geometry::transform(const SpatialReference& out)
 {
     if (!srsValid() && out.empty())
@@ -153,6 +154,7 @@ void Geometry::transform(const SpatialReference& out)
         throw pdal_error("Geometry::transform() failed.");
     modified();
 }
+**/
 
 
 void Geometry::setSpatialReference(const SpatialReference& srs)

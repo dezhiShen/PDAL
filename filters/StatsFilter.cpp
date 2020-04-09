@@ -283,7 +283,8 @@ void StatsFilter::extractMetadata(PointTableRef table)
         {
             p.setSpatialReference(ref);
             SpatialReference epsg4326("EPSG:4326");
-            p.transform(epsg4326);
+//ABELL
+//            p.transform(epsg4326);
             BOX3D ddbox = p.bounds();
             MetadataNode epsg_4326_box = Utils::toMetadata(ddbox);
             MetadataNode dddbox = box_metadata.add("EPSG:4326");
