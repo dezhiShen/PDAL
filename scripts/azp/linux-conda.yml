@@ -22,6 +22,7 @@ jobs:
   - script: |
       . /opt/conda/etc/profile.d/conda.sh
       source activate pdal
+      unset PROJ_NETWORK
       echo "current directory:" `pwd`
       mkdir build
       cd build

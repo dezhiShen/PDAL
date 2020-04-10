@@ -34,6 +34,7 @@ jobs:
     displayName: Install PDAL dependencies
   - script: |
       source activate pdal
+      unset PROJ_NETWORK
       export CI=azure
       source run_conda_forge_build_setup
     env: {
