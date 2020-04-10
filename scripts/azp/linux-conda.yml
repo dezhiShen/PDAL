@@ -22,7 +22,6 @@ jobs:
   - script: |
       . /opt/conda/etc/profile.d/conda.sh
       source activate pdal
-      unset PROJ_NETWORK
       echo "current directory:" `pwd`
       mkdir build
       cd build
@@ -61,6 +60,7 @@ jobs:
       export PDAL_TEST_DIR=`pwd`/test
       cd build
       source activate pdal
+      unset PROJ_NETWORK
       ls build/lib/*
       ninja install
     displayName: 'Install'

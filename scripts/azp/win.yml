@@ -26,7 +26,6 @@ jobs:
         call activate pdal
         call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Auxiliary\Build\vcvarsall.bat" x86_amd64
         echo %PATH%
-        set PROJ_NETWORK=
         set CC=cl.exe
         set CXX=cl.exe
         mkdir build
@@ -81,6 +80,7 @@ jobs:
     - script: |
         ECHO ON
         call activate pdal
+        set PROJ_NETWORK=
         pushd build
         call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Auxiliary\Build\vcvarsall.bat" x86_amd64
         ctest -VV --output-on-failure
